@@ -85,15 +85,6 @@ cp "$HOME/.smartcash/smartcash.conf" "$HOME/smartcash-backups/smartcash.conf.$(d
 For watch-only or external-custody services, back up configuration, database
 state and reconciliation records according to your internal security policy.
 
-## Security Notes
-
-- Never hardcode passwords, private keys, recovery words or API keys.
-- Never expose RPC to the public internet.
-- Keep RPC bound to `127.0.0.1` or a private network only.
-- Use unique random RPC credentials.
-- Keep deposit and withdrawal reconciliation logs.
-- Test withdrawals on a staging node before production.
-
 ## Credits
 
 Original SmartCash project:
