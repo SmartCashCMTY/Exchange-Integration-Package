@@ -1,0 +1,20 @@
+# SmartCash 3.0.0 exchange node example.
+# Replace placeholders before production use.
+# Never commit real RPC credentials, private keys or wallet data.
+
+server=1
+daemon=1
+listen=1
+txindex=1
+addressindex=1
+
+port=29678
+rpcport=29679
+rpcbind=127.0.0.1
+rpcallowip=127.0.0.1
+
+rpcuser=CHANGE_ME_RPC_USER
+rpcpassword=CHANGE_ME_LONG_RANDOM_PASSWORD
+
+addnode=151.252.59.32:29678
+addnode=151.252.59.33:29678
