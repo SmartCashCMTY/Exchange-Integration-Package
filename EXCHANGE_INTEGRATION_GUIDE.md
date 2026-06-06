@@ -11,8 +11,8 @@ P2P port: 29678
 RPC port: 29679
 SAPI port: 28080
 Explorer: http://151.252.59.32/explorer/
-Bootstrap: http://151.252.59.32/bootstrap/smartcash3-bootstrap-4269526.tar.gz
-Bootstrap checksum: http://151.252.59.32/bootstrap/smartcash3-bootstrap-4269526.tar.gz.sha256
+Bootstrap: http://151.252.59.32/bootstrap/smartcash3-bootstrap.tar.gz
+Bootstrap checksum: http://151.252.59.32/bootstrap/smartcash3-bootstrap.tar.gz.sha256
 ```
 
 TODO: Replace raw IP endpoints with final community DNS names when published.
@@ -67,9 +67,9 @@ Do not expose RPC publicly.
 ```bash
 mkdir -p /tmp/smartcash3-bootstrap
 cd /tmp/smartcash3-bootstrap
-wget http://151.252.59.32/bootstrap/smartcash3-bootstrap-4269526.tar.gz
-wget http://151.252.59.32/bootstrap/smartcash3-bootstrap-4269526.tar.gz.sha256
-sha256sum -c smartcash3-bootstrap-4269526.tar.gz.sha256
+wget http://151.252.59.32/bootstrap/smartcash3-bootstrap.tar.gz
+wget http://151.252.59.32/bootstrap/smartcash3-bootstrap.tar.gz.sha256
+sha256sum -c smartcash3-bootstrap.tar.gz.sha256
 ```
 
 Stop the daemon before restoring bootstrap data:
@@ -78,7 +78,7 @@ Stop the daemon before restoring bootstrap data:
 smartcash-cli stop || true
 sleep 10
 mkdir -p "$HOME/.smartcash"
-tar -xzf /tmp/smartcash3-bootstrap/smartcash3-bootstrap-4269526.tar.gz -C "$HOME/.smartcash"
+tar -xzf /tmp/smartcash3-bootstrap/smartcash3-bootstrap.tar.gz -C "$HOME/.smartcash"
 ```
 
 TODO: Confirm the exact archive root layout before publishing automated restore

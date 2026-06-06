@@ -1,11 +1,11 @@
 # SmartCash 3 Exchange Integration Package
 
-## Projektbeschreibung
+## Project Description
 
 Compact integration package for exchanges, payment processors, explorers and
 other SmartCash 3.0.0 third-party services.
 
-## Schnellstart
+## Quick Start
 
 ```bash
 git clone https://github.com/SmartCashCMTY/Exchange-Integration-Package.git
@@ -20,7 +20,7 @@ EXCHANGE_INTEGRATION_GUIDE.md
 RPC_REFERENCE.md
 ```
 
-## Systemanforderungen
+## System Requirements
 
 - SmartCash 3.0.0 daemon or node wallet.
 - Linux server for production daemon deployments.
@@ -42,7 +42,7 @@ sudo install -m 0755 linux-x86_64/smartcashd /usr/local/bin/smartcashd
 sudo install -m 0755 linux-x86_64/smartcash-cli /usr/local/bin/smartcash-cli
 ```
 
-## Konfiguration
+## Configuration
 
 ```bash
 mkdir -p "$HOME/.smartcash"
@@ -54,7 +54,7 @@ nano "$HOME/.smartcash/smartcash.conf"
 
 Replace all placeholders before starting production services.
 
-## Update-Anleitung
+## Update Guide
 
 ```bash
 smartcash-cli stop || true
@@ -70,7 +70,7 @@ sudo install -m 0755 linux-x86_64/smartcash-cli /usr/local/bin/smartcash-cli
 smartcashd -daemon
 ```
 
-## Backup-Anleitung
+## Backup Guide
 
 For wallet-based services:
 
@@ -85,7 +85,7 @@ cp "$HOME/.smartcash/smartcash.conf" "$HOME/smartcash-backups/smartcash.conf.$(d
 For watch-only or external-custody services, back up configuration, database
 state and reconciliation records according to your internal security policy.
 
-## Sicherheitshinweise
+## Security Notes
 
 - Never hardcode passwords, private keys, recovery words or API keys.
 - Never expose RPC to the public internet.
@@ -96,16 +96,16 @@ state and reconciliation records according to your internal security policy.
 
 ## Credits
 
-Original SmartCash Projekt:
+Original SmartCash project:
 https://github.com/smartcash
 
-Dieses Repository ist ein Fork bzw. eine Weiterentwicklung auf Basis der
-Open-Source-Arbeiten des SmartCash-Projekts. Alle Rechte an den ursprünglichen
-Komponenten, Marken, Logos, Quellcodes und Dokumentationen verbleiben bei den
-jeweiligen Rechteinhabern. Der ursprüngliche Creator sowie alle relevanten
-Open-Source-Beiträge müssen angemessen genannt werden.
+This repository is a fork and continuation based on the open-source work of the
+SmartCash project. All rights to original components, trademarks, logos, source
+code and documentation remain with their respective rights holders. The original
+creator and all relevant open-source contributors should be credited
+appropriately.
 
-## Lizenz
+## License
 
 This package contains documentation and configuration examples for SmartCash
 3.0.0 integrations. SmartCash Core is MIT licensed according to the original
@@ -113,27 +113,25 @@ This package contains documentation and configuration examples for SmartCash
 Bitcoin-Core-derived code, Berkeley DB, Boost, OpenSSL, Qt, libevent, ZeroMQ and
 other build/runtime dependencies.
 
-TODO: Bitte Lizenz des Originalprojekts prüfen und Drittanbieter-Lizenzen vor
-kommerzieller Nutzung final verifizieren.
+TODO: Review the original project license and verify third-party licenses before
+commercial use.
 
-## Haftungsausschluss
+## Disclaimer
 
-Nutzung erfolgt auf eigene Gefahr. Es gibt keine Garantie auf Funktionalität,
-Verfügbarkeit oder Sicherheit. Es wird keine Haftung für direkte oder indirekte
-Schäden, Datenverlust, finanzielle Verluste, Wallet-Verluste, verlorene Private
-Keys, Fehlkonfigurationen, Netzwerk- oder Blockchain-Probleme, Softwarefehler
-oder Sicherheitslücken übernommen.
+Use at your own risk. No guarantee is provided for functionality, availability
+or security. No liability is accepted for direct or indirect damages, data loss,
+financial losses, wallet losses, lost private keys, misconfiguration, network or
+blockchain problems, software defects or security vulnerabilities.
 
-## Kryptowährungs-Risiken
+## Cryptocurrency Risks
 
-Kryptowährungen sind hochriskante digitale Vermögenswerte. Kursverluste bis hin
-zum Totalverlust sind möglich. Staking- und Node-Betrieb bergen technische
-Risiken. Nutzer sind selbst für die Sicherung ihrer Wallets, lokale Gesetze und
-steuerliche Pflichten verantwortlich.
+Cryptocurrencies are high-risk digital assets. Price losses up to total loss are
+possible. Staking and node operation involve technical risks. Users are solely
+responsible for securing their wallets, complying with local laws and meeting
+tax obligations.
 
-## Rechtlicher Hinweis
+## Legal Notice
 
-Die Nutzung hat im Einklang mit den jeweils geltenden lokalen Gesetzen und
-Vorschriften zu erfolgen. Nutzer sind selbst verantwortlich für regulatorische,
-steuerliche und rechtliche Anforderungen ihres Landes. Diese Dokumentation ist
-keine Rechts-, Steuer- oder Finanzberatung.
+Use must comply with applicable local laws and regulations. Users are solely
+responsible for regulatory, tax and legal requirements in their country. This
+documentation does not provide legal, tax or financial advice.
