@@ -58,5 +58,5 @@ smartcash-cli snsync status
 
 - `txindex=1` is recommended for exchange transaction lookup.
 - `addressindex=1` is recommended where address-level indexing is required.
-- TODO: Confirm final public exchange confirmation policy.
-- TODO: Confirm final explorer API endpoint list.
+- No separate public exchange confirmation policy is published here.
+- No final public explorer API endpoint list is published here.

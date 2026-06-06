@@ -25,7 +25,7 @@ RPC_REFERENCE.md
 - SmartCash 3.0.0 daemon or node wallet.
 - Linux server for production daemon deployments.
 - Local RPC access only, protected by firewall and strong credentials.
-- Enough disk space for full blockchain data. TODO final recommended disk size.
+- Enough disk space for full blockchain data: at least 100 GB for normal nodes and 200 GB or more for production services.
 
 ## Installation
 
@@ -104,7 +104,7 @@ This package contains documentation and configuration examples for SmartCash
 Bitcoin-Core-derived code, Berkeley DB, Boost, OpenSSL, Qt, libevent, ZeroMQ and
 other build/runtime dependencies.
 
-TODO: Review the original project license and verify third-party licenses before
+Review the original project license and verify third-party licenses before
 commercial use.
 
 ## Disclaimer

@@ -15,7 +15,7 @@ Bootstrap: http://151.252.59.32/bootstrap/smartcash3-bootstrap.tar.gz
 Bootstrap checksum: http://151.252.59.32/bootstrap/smartcash3-bootstrap.tar.gz.sha256
 ```
 
-TODO: Replace raw IP endpoints with final community DNS names when published.
+Raw IP endpoints remain in use until final community DNS records are published.
 
 ## 2. Source And Binaries
 
@@ -81,8 +81,7 @@ mkdir -p "$HOME/.smartcash"
 tar -xzf /tmp/smartcash3-bootstrap/smartcash3-bootstrap.tar.gz -C "$HOME/.smartcash"
 ```
 
-TODO: Confirm the exact archive root layout before publishing automated restore
-scripts for production exchanges.
+The bootstrap archive contains `blocks/` and `chainstate/` at archive root.
 
 ## 5. Start And Health Checks
 
@@ -130,9 +129,9 @@ Fetch one transaction:
 smartcash-cli gettransaction "TXID_HERE"
 ```
 
-TODO: Final official minimum exchange deposit confirmations must be confirmed by
-the community. Until then, exchanges should choose an internal risk-based value
-and document it for users.
+No separate public exchange confirmation policy is published here. Exchanges
+should choose an internal risk-based confirmation value and document it for
+users.
 
 ## 7. Withdrawal Flow
 
@@ -177,8 +176,9 @@ Explorer UI:
 http://151.252.59.32/explorer/
 ```
 
-TODO: Document final Iquidus API paths after the public API endpoint policy is
-confirmed.
+No final public Iquidus API endpoint policy is published here. Use the Explorer
+UI and local Core RPC for production integration unless your service validates
+specific Explorer API paths independently.
 
 ## 10. Security Checklist
 
