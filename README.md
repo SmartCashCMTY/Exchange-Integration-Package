@@ -1,5 +1,7 @@
 # SmartCash 3 Exchange Integration Package
 
+## Projektbeschreibung
+
 Compact integration package for exchanges, payment processors, explorers and
 other SmartCash 3.0.0 third-party services.
 
