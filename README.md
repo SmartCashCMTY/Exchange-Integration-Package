@@ -1,36 +1,26 @@
-# SmartCash 3 Exchange Integration Package
+# Exchange-Integration-Package 3.0.0
 
-## Project Description
+SmartCash 3.0.0 integration package for exchanges, payment processors, explorers, and custody services.
 
-Compact integration package for exchanges, payment processors, explorers and
-other SmartCash 3.0.0 third-party services.
+## What It Does
+- Provides RPC and configuration examples for production integrations
+- Documents daemon setup, wallet handling, and service backup basics
+- Points integrations to the SmartCash 3.0.0 community release assets
 
 ## Quick Start
-
 ```bash
 git clone https://github.com/SmartCashCMTY/Exchange-Integration-Package.git
 cd Exchange-Integration-Package
 cp smartcash.conf.exchange.example smartcash.conf
 ```
 
-Read first:
-
-```text
-EXCHANGE_INTEGRATION_GUIDE.md
-RPC_REFERENCE.md
-```
-
 ## System Requirements
-
-- SmartCash 3.0.0 daemon or node wallet.
-- Linux server for production daemon deployments.
-- Local RPC access only, protected by firewall and strong credentials.
-- Enough disk space for full blockchain data: at least 100 GB for normal nodes and 200 GB or more for production services.
+- SmartCash 3.0.0 daemon or node wallet
+- Linux server for production daemon deployments
+- Local RPC access protected by firewall and strong credentials
+- 100 GB free disk space minimum, 200 GB or more for production services
 
 ## Installation
-
-Install node client binaries from GitHub:
-
 ```bash
 mkdir -p /tmp/smartcash3-node-wallet
 cd /tmp/smartcash3-node-wallet
@@ -43,7 +33,6 @@ sudo install -m 0755 linux-x86_64/smartcash-cli /usr/local/bin/smartcash-cli
 ```
 
 ## Configuration
-
 ```bash
 mkdir -p "$HOME/.smartcash"
 chmod 700 "$HOME/.smartcash"
@@ -52,10 +41,9 @@ chmod 600 "$HOME/.smartcash/smartcash.conf"
 nano "$HOME/.smartcash/smartcash.conf"
 ```
 
-Replace all placeholders before starting production services.
+Replace all placeholder RPC values before production use.
 
-## Update Guide
-
+## Update
 ```bash
 smartcash-cli stop || true
 sleep 10
@@ -70,10 +58,7 @@ sudo install -m 0755 linux-x86_64/smartcash-cli /usr/local/bin/smartcash-cli
 smartcashd -daemon
 ```
 
-## Backup Guide
-
-For wallet-based services:
-
+## Backup
 ```bash
 smartcash-cli stop || true
 sleep 10
@@ -82,47 +67,28 @@ cp "$HOME/.smartcash/wallet.dat" "$HOME/smartcash-backups/wallet.dat.$(date +%Y%
 cp "$HOME/.smartcash/smartcash.conf" "$HOME/smartcash-backups/smartcash.conf.$(date +%Y%m%d-%H%M%S)"
 ```
 
-For watch-only or external-custody services, back up configuration, database
-state and reconciliation records according to your internal security policy.
+For external-custody services, back up configuration, database state, and reconciliation records under your own security policy.
+
+## Security
+- Use local RPC only unless you fully understand the exposure
+- Never commit credentials, wallet files, seed phrases, private keys, or API keys
+- Use strong RPC credentials and firewall rules
 
 ## Credits
-
-Original SmartCash project:
-https://github.com/smartcash
-
-This repository is a fork and continuation based on the open-source work of the
-SmartCash project. All rights to original components, trademarks, logos, source
-code and documentation remain with their respective rights holders. The original
-creator and all relevant open-source contributors should be credited
-appropriately.
+Original SmartCash Project: https://github.com/smartcash
+This repository is an Update 3.0.0 based on the open-source work of the SmartCash project.
+All rights to original components, trademarks, logos, source code, and documentation remain with their respective owners.
+The original creator and relevant open-source contributors should be acknowledged appropriately.
 
 ## License
-
-This package contains documentation and configuration examples for SmartCash
-3.0.0 integrations. SmartCash Core is MIT licensed according to the original
-`COPYING` file in the Core source repository. Third-party components include
-Bitcoin-Core-derived code, Berkeley DB, Boost, OpenSSL, Qt, libevent, ZeroMQ and
-other build/runtime dependencies.
-
-Review the original project license and verify third-party licenses before
-commercial use.
+SmartCash Core components are generally released under MIT. Third-party components keep their own licenses.
+Please check the original project license.
 
 ## Disclaimer
-
-Use at your own risk. No guarantee is provided for functionality, availability
-or security. No liability is accepted for direct or indirect damages, data loss,
-financial losses, wallet losses, lost private keys, misconfiguration, network or
-blockchain problems, software defects or security vulnerabilities.
+Use at your own risk. No warranty is provided for functionality, availability, or security. No liability is accepted for direct or indirect damages, data loss, wallet loss, lost private keys, misconfiguration, network issues, blockchain issues, software bugs, or security vulnerabilities.
 
 ## Cryptocurrency Risks
-
-Cryptocurrencies are high-risk digital assets. Price losses up to total loss are
-possible. Staking and node operation involve technical risks. Users are solely
-responsible for securing their wallets, complying with local laws and meeting
-tax obligations.
+Cryptocurrencies are high-risk digital assets. Losses, including total loss, are possible. Node operation and staking-related workflows may fail or behave unexpectedly. You are responsible for wallet backups, local law compliance, and tax obligations.
 
 ## Legal Notice
-
-Use must comply with applicable local laws and regulations. Users are solely
-responsible for regulatory, tax and legal requirements in their country. This
-documentation does not provide legal, tax or financial advice.
+Use this software in accordance with the laws and regulations that apply in your jurisdiction. You are responsible for regulatory, tax, and legal compliance in your country. No legal, tax, or financial advice is provided.
