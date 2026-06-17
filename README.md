@@ -18,7 +18,7 @@ cp smartcash.conf.exchange.example smartcash.conf
 - SmartCash 3.0.0 daemon or node wallet
 - Linux server for production daemon deployments
 - Local RPC access protected by firewall and strong credentials
-- 100 GB free disk space minimum, 200 GB or more for production services
+- 30 GB free disk space minimum, 50 GB or more for production services
 
 ## Installation
 ```bash
