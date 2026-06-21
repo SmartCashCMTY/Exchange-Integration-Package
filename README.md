@@ -20,6 +20,10 @@ cp smartcash.conf.exchange.example smartcash.conf
 - Local RPC access protected by firewall and strong credentials
 - 30 GB free disk space minimum, 50 GB or more for production services
 
+## Hardware Requirements
+- See SmartNode requirements for full node hosting
+- Integration layer has no additional hardware requirements
+
 ## Installation
 ```bash
 mkdir -p /tmp/smartcash3-node-wallet
